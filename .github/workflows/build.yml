@@ -91,7 +91,7 @@ jobs:
       - name: Build (Windows)
         if: runner.os == 'Windows'
         run: |
-          wails build -platform ${{ matrix.platform }} -ldflags "-X main.Version=${{ steps.version.outputs.version }} -H windowsgui"
+          wails build -platform ${{ matrix.platform }} -ldflags "-X main.Version=${{ steps.version.outputs.version }}"
 
       - name: Build (macOS)
         if: runner.os == 'macOS'
